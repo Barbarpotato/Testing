@@ -28,12 +28,12 @@ const LabDetail = lazy(() => import("CMS_Registry/LabDetail"));
 function Main() {
   return (
     <Fragment>
-      <Hero />
-      <About />
-      <LabHome />
-      <Project />
-      <Experience />
-      <Contact />
+      <Hero SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <About SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <LabHome SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <Project SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <Experience SecretKey={process.env.EXPOSE_SECRET_KEY} />
+      <Contact SecretKey={process.env.EXPOSE_SECRET_KEY} />
     </Fragment>
   );
 }
