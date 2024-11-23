@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "/Testing",
+    publicPath: "/Testing/",
   },
 
   resolve: {
