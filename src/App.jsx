@@ -44,14 +44,14 @@ const App = () => (
     <HashRouter>
       <QueryClientProvider client={queryClient}>
         <Suspense fallback={<Loading />}>
-          <Header />
+          <Header SecretKey={process.env.EXPOSE_SECRET_KEY} />
           <ChatbotButton />
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/labs" element={<LabIndex />} />
-            <Route path='/lab/:blogId' element={<LabDetail />} />
+            <Route path="/labs" element={<LabIndex SecretKey={process.env.EXPOSE_SECRET_KEY} />} />
+            <Route path='/lab/:blogId' element={<LabDetail SecretKey={process.env.EXPOSE_SECRET_KEY} />} />
           </Routes>
-          <Footer />
+          <Footer SecretKey={process.env.EXPOSE_SECRET_KEY} />
         </Suspense>
       </QueryClientProvider>
     </HashRouter>
